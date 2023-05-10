@@ -1,0 +1,10 @@
+{
+    "env": {
+        "MONGO_USER": "taofiq",
+        "MONGO_PASSWORD": "SuGcLYcAdzoezKAb",
+        "MONGO_DEFAULT_DATABASE": "shop1",
+        "STRIPE_KEY": "sk_test_51N3DR0LI5PUioH8tf3Mi5nDf4AQWj5xnErIxQrymXWB9xMwDno87wYYOgKaIXxZ1kTGc7LBpxwkO6o3nxCfgHNfY005YfSJ1lH",
+        "RECAPTCHA_SITE_KEY": "6LeBIPMlAAAAAG9QekW_y78sMH8Pi1HJKVBoZjRS",
+        "RECAPTCHA_SECRET_KEY":"6LeBIPMlAAAAAO1hRp8WCC8NpHN3nHcHQnmoVSly"
+    }
+}

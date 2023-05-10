@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "WelcomeTemplate",
+    "SubjectPart": "Welcome, {{name}}!",
+    "HtmlPart": "<h1>Hello {{name}},</h1><p>This is an email to welcome you to our services. We hope to do our best</p>",
+    "TextPart": "Hello {{name}},\r\nThis is an email to welcome you to our services. We hope to do our best."
+  }
+}

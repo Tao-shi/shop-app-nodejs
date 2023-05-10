@@ -1,0 +1,54 @@
+<%- include('../includes/head.ejs') %>
+
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<%- include('../includes/navigation.ejs') %>
+<main>
+  <%- include('../includes/login-error') %>
+  <form class="login-form" action="/signup" method="post" novalidate>
+    <div class="form-control">
+      <label class="form__label" for="name">Name</label>
+      <input 
+      class=" <%= validationError.find(e => e.path === 'name') ? 'invalid' : ''  %> " 
+      value="<%= oldInput.name %>" 
+      type="text" 
+      name="name" 
+      id="name" />
+    </div>
+    <div class="form-control">
+      <label class="form__label" for="email">E-mail</label>
+      <input 
+      class=" <%= validationError.find(e => e.path === 'email') ? 'invalid' : ''  %> " 
+      value="<%= oldInput.email %>" 
+      type="email" 
+      name="email" 
+      id="email" />
+    </div>
+    <div class="form-control">
+      <label class="form__label" for="password">Password</label>
+      <input 
+      class=" <%= validationError.find(e => e.path === 'password') ? 'invalid' : ''  %> " 
+      value="<%= oldInput.password %>" 
+      type="password" 
+      name="password" 
+      id="password" />
+    </div>
+    <div class="form-control">
+      <label class="form__label" for="confirmPassword">Confirm Password</label>
+      <input 
+      class="<%= validationError.find(e => e.path === 'confirmPassword') ? 'invalid' : ''  %>" 
+      value="<%= oldInput.confirmPassword %>"
+      type="password" 
+      name="confirmPassword" 
+      id="password" />
+    </div>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <button class="btn" type="submit">Signup</button>
+    <br><br>
+    <div class="g-recaptcha" data-sitekey="6LeBIPMlAAAAAG9QekW_y78sMH8Pi1HJKVBoZjRS"></div>
+  </form>
+</main>
+<script src="//www.google.com/recaptcha/api.js" async defer></script>
+<%- include('../includes/end.ejs') %>

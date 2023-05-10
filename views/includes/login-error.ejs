@@ -1,0 +1,11 @@
+ <% if (errorMessage) { %>
+ <div class="user-message user-message--error centered"> <%= errorMessage %>
+   <button class="close close--error">&times;</button>
+ </div>
+ <% } %>
+
+ <% if (successMessage) { %>
+ <div class="user-message user-message--success centered"> <%= successMessage %>
+   <button class="close close--success">&times;</button>
+ </div>
+ <% } %>

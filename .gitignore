@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -134,3 +135,10 @@ aws
 server.cert
 server.key
 awscliv2.zip
+=======
+node_modules
+aws
+server.cert
+server.key
+awscliv2.zip
+>>>>>>> b274814 (initial commit)
