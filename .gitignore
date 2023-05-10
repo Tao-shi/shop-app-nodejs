@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#others
+aws
+server.cert
+server.key
+awscliv2.zip
