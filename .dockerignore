@@ -1,0 +1,6 @@
+node_modules
+Raw-nodejs
+npm-debug.log
+.vscode
+aws
+awscliv2.zip

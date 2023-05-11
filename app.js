@@ -1,5 +1,6 @@
 // @ts-nocheck
-// const http = require('http'); // We can remove this, as the app already imports and uses it
+require("dotenv").config();
+console.log(require("dotenv").config());
 const path = require("path");
 const crypto = require("crypto");
 const fs = require("fs");
@@ -48,7 +49,7 @@ const csrfProtection = csrf();
 // To use the the connect mongodb session
 const store = new MongoDBStore(
   {
-    uri: "mongodb+srv://taofiq:SuGcLYcAdzoezKAb@cluster1.9lgk7hc.mongodb.net/shop1?retryWrites=true&w=majority",
+    uri: process.env.ATLAS_URI,
     collection: "session",
     connectionOptions: {
       useNewUrlParser: true,
@@ -118,8 +119,8 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Add the csrf value to all routes
 app.use((req, res, next) => {
   // These are set local vars that are passed into the views
-  res.locals.isAuthenticated = req.session?.isLoggedIn;
-  res.locals.csrfToken = req?.csrfToken();
+  res.locals.isAuthenticated = req.session.isLoggedIn;
+  res.locals.csrfToken = req.csrfToken();
   next();
 });
 

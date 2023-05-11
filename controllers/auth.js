@@ -219,7 +219,7 @@ exports.signup = (req, res, next) => {
       confirmPassword: "",
     },
     validationError: [],
-    captcha: captcha
+    recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY
   });
 
   // res.render("auth/signup", {
