@@ -17,11 +17,9 @@ const updateAllProducts = async () => {
       {},
       { $set: { [propertyToUpdate]: newValue } }
     );
+    condolr.log('Updated products!')
   } catch (error) {
     console.log(error)
-    throw new Error("Could not perform this operation");
-  } finally {
-  }
 };
 
 updateAllProducts()

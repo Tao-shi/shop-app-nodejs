@@ -143,4 +143,6 @@ server.key
 awscliv2.zip
 Raw-nodejs/
 ses
+*.log
+*.logs
 >>>>>>> b274814 (initial commit)s
